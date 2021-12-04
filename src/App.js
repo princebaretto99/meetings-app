@@ -7,9 +7,11 @@ import Navbar from './components/Navbar/Navbar'
 import Login from './Pages/Login/Login'
 import Register from './Pages/Register/Register'
 import Profile from './Pages/Profile/Profile'
+import Event from './Pages/Event/Event';
 
 import { makeStyles } from '@material-ui/core/styles';
 import { Container } from '@material-ui/core'
+
 
 
 const drawerWidth = 240;
@@ -91,6 +93,7 @@ function App() {
 
               <Route exact path="/profile" component={Profile} />
               <Route exact path="/register" component={Register} />
+              <Route exact path="/events" component={Event} />
 
             </div>
           </AuthProvider>

@@ -5,6 +5,7 @@ const mongoose = require("mongoose");
 
 const PORT = process.env.PORT || 8000
 const userRouter = require('./routes/user')
+const taskRouter = require('./routes/tasks')
 
 const app = express();
 
@@ -13,6 +14,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }))
 
 app.use("/", userRouter)
+
+app.use("/tasks", taskRouter)
 
 
 app.listen(PORT, () => {

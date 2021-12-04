@@ -54,7 +54,7 @@ function TaskForm() {
     return (
         <div>
             <Button variant="outlined" color="primary" onClick={handleClickOpen}>
-                Open
+                Add tasks
             </Button>
             <Dialog aria-labelledby="customized-dialog-title" open={open}>
                 <DialogTitle id="customized-dialog-title">
@@ -82,6 +82,7 @@ function TaskForm() {
                     </TextField>
 
                     <TextField
+                        style={{ marginBottom: 30 }}
                         fullWidth
                         margin="dense"
                         variant="outlined"
@@ -93,7 +94,6 @@ function TaskForm() {
                     />
                     <LocalizationProvider dateAdapter={AdapterDateFns}>
                         <DesktopDatePicker
-                            style={{padding: "top"}}
                             label="Due Date"
                             inputFormat="MM/dd/yyyy"
                             value={date}
